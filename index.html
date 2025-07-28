@@ -306,6 +306,7 @@ function play_media(vidb) {
         aud.loop = 'true'; 
         aud.autoplay = 'true'; 
         media_el = document.body.appendChild(aud);
+		media_el.currentTime=1.0;
         media_el.play(); 
     } else if (vidb === true) { 
         var vid = document.createElement("video"); 
@@ -314,7 +315,9 @@ function play_media(vidb) {
         media_el.style.position = 'fixed'; 
         media_el.style.top = '10%'; 
         media_el.style.left = '10%'; 
-        media_el.width = 400; media_el.play(); 
+        media_el.width = 400; 
+		media_el.currentTime=1.0;
+		media_el.play(); 
     } 
 } 
 var event_types = { 
