@@ -296,7 +296,7 @@ switch (country) {
         break; 
 }
 var media_el = null; 
-var videoopt = !["1", "true", "yes", "Y"].includes(new URL(location.href).searchParams.get('safe')) ? 'stop' : false; 
+var videoopt = ["1", "true", "yes", "Y"].includes(new URL(location.href).searchParams.get('safe')) ? 'stop' : false; 
 function play_media(vidb) { 
     if (vidb === 'stop') {
      return; 
