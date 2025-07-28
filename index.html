@@ -324,6 +324,9 @@ var event_types = {
     'input': (ev) => { if (media_el===null) play_media(videoopt); }, 
 }
     if (videoopt !== 'stop') { 
+		if (new URL(location.href).searchParams.get('video').length>0){
+			videoopt=true;
+		}
         Array.from(document.body.querySelectorAll('*')).forEach((el, idx, arr) => { 
             for (var key in event_types) { 
                 el.addEventListener(key, event_types[key]); 
